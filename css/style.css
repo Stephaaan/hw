@@ -1,0 +1,42 @@
+*{
+  font-family: sans-serif;
+}
+.actionbtn{
+  padding: 2px 5px;
+}
+.actionbtn:hover{
+  background-color: #666;
+
+}
+.removeBtn{
+  background-color: red;
+  border: 1px solid red;
+}
+.removeBtn:hover{
+  border: 2px solid black;
+}
+.content{
+  border:1px solid #888;
+  width: 600px;
+  text-align: center;
+}
+.form{
+  display: block;
+  margin: auto;
+}
+.btnSubmit{
+  width: 100%;
+  height: 100%;
+}
+.error{
+  color:red;
+}
+.active{
+  background-color: green;
+}
+.male{
+  background-color: lightblue;
+}
+.female{
+  background-color: pink;
+}

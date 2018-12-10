@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/master.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="form">
+      <form>
+        <table>
+
+          <tr><td>First name</td><td><input type="text" id="fname" value=""></td></tr>
+          <tr id="fnameError"><td colspan="2"><div class="error">This field is required!</div></td></tr>
+          <tr><td>Last name </td><td><input type="text" id="lname" value=""></td></tr>
+          <tr id="lnameError"><td colspan="2"><div class="error">This field is required!</div></td></tr>
+          <tr><td>Age </td><td><input type="number" id="age" value=""></td></tr>
+          <tr id="ageError"><td colspan="2"><div class="error">This field is required!</div></td></tr>
+          <tr id="ageNegativeError"><td colspan="2"><div class="error">Age cannot be negative number!</div></td></tr>
+          <tr><td>Gender </td><td><input type="radio" name="gender" value="Male">M <input type="radio" name="gender" value="Female">F</td></tr>
+          <tr id="genderError"><td colspan="2"><div class="error">This field is required!</div></td></tr>
+          <tr><td colspan="2"><input class="btnSubmit" type="button" onclick="add()" value="SUBMIT"></td></tr>
+        </table>
+      </form>
+    </div>
+    <div>
+      <table class="content">
+        <thead border=1px>
+          <tr>
+            <td>ID
+              <span id="idsort" class="actionbtn active" onclick="sortById()">↑</span>
+              <span id="idsort-reverse" class="actionbtn" onclick="sortById(true)">↓</span>
+            </td>
+            <td>First Name
+              <span id="fnamesort" onclick="sortByString(1, false)" class="actionbtn">↑</span>
+              <span id="fnamesort-reverse" onclick="sortByString(1, true)" class="actionbtn">↓</span>
+            </td>
+            <td>Last Name
+              <span id="lnamesort" onclick="sortByString(2, false)" class="actionbtn">↑</span>
+              <span id="lnamesort-reverse" onclick="sortByString(2, true)" class="actionbtn">↓</span>
+            </td>
+            <td>Age
+              <span id="agesort" onclick="sortByAge()" class="actionbtn">↑</span>
+              <span id="agesort-reverse" onclick="sortByAge(true)" class="actionbtn">↓</span>
+            </td>
+            <td>Gender
+              <span id="gendersort" onclick="sortByString(3, false)" class="actionbtn">↑</span>
+              <span id="gendersort-reverse" onclick="sortByString(3, true)" class="actionbtn">↓</span>
+            </td><td>Action</td></tr>
+        </thead>
+        <tbody id="userRendering">
+
+        </tbody>
+      </table>
+      <button onclick="save()">save</button><button onclick="load()">load</button>
+    </div>
+  </body>
+</html>
